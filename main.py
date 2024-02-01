@@ -68,7 +68,7 @@ def run_mcts(inputs: tuple[NumHist, ...], target: Num):
             print(np.sqrt(root.child_weight_sos / root.child_num_visits - (root.child_weight_sum / root.child_num_visits) ** 2))
 
     if -best_weight < math.log(2) * mcts.ACCURACY_WEIGHT:
-        print("Found:", best_num_hist[1])
+        print("Found:", best_num_hist[1] if best_num_hist[0] == target else "-" + best_num_hist[1])
         print("Purity:", best_weight)
     else:
         print("Failed")
