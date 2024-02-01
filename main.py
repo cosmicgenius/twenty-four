@@ -5,7 +5,7 @@ if __name__ == "__main__":
     inputs: list[tuple[Num, str]] = []
     N: int = int(input("Number of inputs: "))
     for i in range(N):
-        num = input("Next number: ")
+        num = input("Next number: ").strip()
         inputs.append((Num(num), num))
 
     target = Num(input("Target number: "))
