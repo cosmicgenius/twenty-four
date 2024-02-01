@@ -14,6 +14,7 @@ class Num(Fraction):
                         if denominator != 1 else \
                         str(numerator)
     """
+NumHist = tuple[Num, str]
 
 def is_atom(n: Num, hist: str) -> bool:
     return n == n.__floor__() and n >= 0 and hist == str(n)
@@ -34,6 +35,12 @@ class Op:
         for n in range(0, self.arity):
             res = res.replace('$' + str(n + 1), operands[n])
         return res
+
+    def __str__(self) -> str:
+        return str(self.op) + str(self.arity) + str(self.purity)
+    
+    def __hash__(self) -> int:
+        return hash(str(self))
 
 any_domain = lambda *_: True
 
