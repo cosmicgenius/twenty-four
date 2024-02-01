@@ -1,5 +1,5 @@
 from logic import Num
-from search import search, fail
+from old_search import old_search, fail
 
 if __name__ == "__main__":
     inputs: list[tuple[Num, str]] = []
@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     target = Num(input("Target number: "))
 
-    res, pur = search(tuple(inputs), target)
+    res, pur = old_search(tuple(inputs), target)
     if pur == fail:
         print("No solution found")
     else: 
