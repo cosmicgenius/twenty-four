@@ -34,6 +34,7 @@ to the following table, and then summed:
 | Factorial        | !      | 1      | -5     | 5! = 120    |
 | Divide and floor | //     | 2      | -10    | 5 // 3 = 1  |
 | Square Root      | sqrt   | 1      | -10    | sqrt(9) = 3 |
+
 (arity refers to the number of operands taken, only these operations 
 are allowed currently).
 
